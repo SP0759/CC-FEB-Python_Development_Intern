@@ -13,7 +13,7 @@ def send_email(to_entry, subject_entry, message_text):
     # Set up the SMTP server
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login('sumitpawar0759@gmail.com', 'jctxzxbzdglluxls')
+    server.login('your-email@example.com', 'Your-App-Pass')
     # Get the recipient, subject, and message from the form
     to = to_entry.get()
     subject = subject_entry.get()
@@ -21,7 +21,7 @@ def send_email(to_entry, subject_entry, message_text):
 
     # Send the email
     msg = f'Subject: {subject}\n\n{message}'
-    server.sendmail('sumitpawar0759@gmail.com', to, msg)
+    server.sendmail('your-email@example.com', to, msg)
 
     # Close the server
     server.quit()
